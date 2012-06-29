@@ -1,5 +1,5 @@
 <head>
-  <title>nouns</title>
+  <title>Nouns</title>
 </head>
 
 <body>
@@ -7,7 +7,11 @@
 </body>
 
 <template name="hello">
-  <h1>Hello Nouns!</h1>
-  <textarea class='text' placeholder='start typing your sentence'></textarea>
+  <h1>Nouns</h1>
+  <input type='text' class='text' placeholder='start typing your sentence'></input>
+  <h4 class='preview_text'>Preview: </h4>
   <p class='output'></p>
+  <ul>
+    {{{sentences}}}
+  </ul>
 </template>
