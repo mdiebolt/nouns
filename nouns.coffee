@@ -2,7 +2,7 @@ Words = new Meteor.Collection 'words'
 Sentences = new Meteor.Collection 'sentences'
 
 createSVG = (path) ->
-  "<object type='image/svg+xml' width='20px' height='20px' data='#{path}'></object>"
+  "<object type='image/svg+xml' width='30px' height='30px' data='#{path}'></object>"
 
 normalizeString = (str) ->
   str.toLowerCase().trim()
@@ -28,6 +28,9 @@ renderPreview = (insert=false) ->
   $('.output').html(output)
 
 if Meteor.is_client
+  Template.hello.sentenceCount = ->
+    Sentences.find().count() > 0
+
   Template.hello.sentences = ->
     output = ''
 

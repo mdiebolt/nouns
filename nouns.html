@@ -1,5 +1,5 @@
 <head>
-  <title>Nouns</title>
+  <title>Noun project sentences</title>
 </head>
 
 <body>
@@ -7,11 +7,14 @@
 </body>
 
 <template name="hello">
-  <h1>Nouns</h1>
+  <h1>Noun project sentences</h1>
   <input type='text' class='text' placeholder='start typing your sentence'></input>
-  <h4 class='preview_text'>Preview: </h4>
+  <h3 class='preview_text'>Preview: </h3>
   <p class='output'></p>
-  <ul>
-    {{{sentences}}}
-  </ul>
+  {{#if sentenceCount}}
+    <h2>Sentences</h2>
+    <ul>
+      {{{sentences}}}
+    </ul>
+  {{/if}}
 </template>
